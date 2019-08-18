@@ -7,14 +7,6 @@ An implementation of a floating search box with search suggestions, also called 
 ![Alt text](/images/1506tq.gif)
 ![Alt text](/images/1508kn.gif)
 
-
-Note
------
-
-This project is not being actively maintained. Have a look [here](https://github.com/arimorty/floatingsearchview/wiki) for information
-that might help you make changes to your own copy of the code base.
-
-
 ...
 
 
@@ -212,7 +204,7 @@ view.queryChanges(5).doOnNext { query -> Toast.makeText(this, "Query is %s".form
 License
 =======
 
-    Copyright (C) 2015 Ari C.
+    Copyright (C) 2019 Random Guys
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
