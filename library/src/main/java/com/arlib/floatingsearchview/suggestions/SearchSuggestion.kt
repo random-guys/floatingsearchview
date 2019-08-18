@@ -1,14 +1,17 @@
-package com.arlib.floatingsearchview.util.adapter;
+package com.arlib.floatingsearchview.suggestions
 
 /**
  * Copyright (C) 2015 Ari C.
- * <p/>
+ *
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * <p/>
+ *
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
+ *
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,25 +19,20 @@ package com.arlib.floatingsearchview.util.adapter;
  * limitations under the License.
  */
 
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.os.Parcelable
 
-public abstract class TextWatcherAdapter implements TextWatcher {
+/**
+ * An object that represents a single suggestion item
+ * in the suggestions drop down generated in response
+ * to an entered query in the [com.arlib.floatingsearchview.FloatingSearchView]
+ */
+interface SearchSuggestion : Parcelable {
 
-    private static final String TAG = "TextWatcherAdapter";
-
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-
-    }
+    /**
+     * Returns the text that should be displayed
+     * for the suggestion represented by this object.
+     *
+     * @return the text for this suggestion
+     */
+    val body: String
 }

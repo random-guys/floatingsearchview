@@ -1,14 +1,17 @@
-package com.arlib.floatingsearchview.util.adapter;
+package com.arlib.floatingsearchview.util.adapter
 
 /**
  * Copyright (C) 2015 Ari C.
- * <p/>
+ *
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * <p/>
+ *
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
+ *
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,25 +19,25 @@ package com.arlib.floatingsearchview.util.adapter;
  * limitations under the License.
  */
 
-import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
+import android.text.Editable
+import android.text.TextWatcher
 
-public abstract class OnItemTouchListenerAdapter implements RecyclerView.OnItemTouchListener {
+abstract class TextWatcherAdapter : TextWatcher {
 
-    private static final String TAG = "OnItemTouchListenerAdapter";
-
-    @Override
-    public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
-        return false;
-    }
-
-    @Override
-    public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+    override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
 
     }
 
-    @Override
-    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+    override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
 
+    }
+
+    override fun afterTextChanged(s: Editable) {
+
+    }
+
+    companion object {
+
+        private val TAG = "TextWatcherAdapter"
     }
 }
